@@ -1,101 +1,61 @@
-import Image from "next/image";
+import { sections } from "@/data/sections";
+import Extras from "./components/extras";
+import Hero from "./components/hero";
+import MoviesSection from "./components/movies-section";
+import PhotoGallery from "./components/photo-gallery";
+import SpotifySection from "./components/spotify-section";
+import TikTokSection from "./components/tiktok-section";
+import Timeline from "./components/timeline";
+import { Dancing_Script } from "next/font/google";
+import SectionNavigator from "./components/section-navigator";
+import { Heart } from "lucide-react";
+
+const dancingScript = Dancing_Script({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <main className="min-h-screen bg-beige">
+      <Hero />
+      <Timeline />
+      <TikTokSection />
+      <SpotifySection />
+      <MoviesSection />
+      <PhotoGallery />
+      <Extras />
+      {/* Sección de navegación */}
+      <section className="bg-white px-4 py-20">
+        <div className="container mx-auto max-w-6xl">
+          <h2
+            className={`${dancingScript.className} mb-4 text-center text-4xl font-bold text-pink-600 md:text-5xl`}
+          >
+            Explora Nuestro Amor
+          </h2>
+          <p className="mb-12 text-center text-gray-600">
+            Cada sección guarda momentos únicos de nuestra historia juntos
+          </p>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {sections.map((section) => (
+              <SectionNavigator
+                key={section.href}
+                title={section.title}
+                description={section.description}
+                href={section.href}
+                icon={section.icon}
+                bgColor={section.bgColor}
+              />
+            ))}
+          </div>
+
+          {/* Mensaje final */}
+          <div className="mt-16 text-center">
+            <div className="inline-flex items-center justify-center rounded-full bg-pink-100 px-4 py-2">
+              <Heart className="mr-2 h-5 w-5 text-pink-600" />
+              <span className="text-pink-600">Nuestro amor crece cada día</span>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+    </main>
   );
 }
