@@ -105,21 +105,15 @@ export const watchedMovies = [
 
 export const watchlist = [
   {
-    title: "Amor en Roma",
-    image: "/placeholder.svg?height=400&width=600",
-    genre: "Romance",
-    description: "Para ver en nuestra próxima cita de película.",
+    title: "Harry Potter",
+    image: "https://wallpapers.com/images/featured/fondo-de-pantalla-de-harry-potter-vtho1d6dbpcfzv5v.jpg",
+    genre: "Fantasía",
+    description: "Tenemos pendiente estas peliculas.",
   },
   {
-    title: "500 días con ella",
-    image: "/placeholder.svg?height=400&width=600",
-    genre: "Romance/Comedia",
-    description: "Dicen que es perfecta para ver en pareja.",
-  },
-  {
-    title: "Antes del Amanecer",
-    image: "/placeholder.svg?height=400&width=600",
-    genre: "Romance/Drama",
-    description: "Para una noche especial juntos.",
+    title: "Games of Thrones",
+    image: "https://m.media-amazon.com/images/M/MV5BMGY1ODg2MjAtZTI4ZS00MjhhLWEwYzMtYTVmY2Q1YzJmMTExXkEyXkFqcGc@._V1_.jpg",
+    genre: "Aventura",
+    description: "Me dicen que es buena, pero me aburrio y pero contigo quiero todo.",
   },
 ];
