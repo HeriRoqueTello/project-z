@@ -1,5 +1,5 @@
+import { Gift, Mail } from "lucide-react";
 import { Dancing_Script } from "next/font/google";
-import { Mail, Quote, Music, Gift } from "lucide-react";
 import Image from "next/image";
 
 const dancingScript = Dancing_Script({ subsets: ["latin"] });
@@ -12,56 +12,56 @@ export default function ExtrasPage() {
       items: [
         {
           title: "Mi Primera Carta para Ti",
-          date: "14/02/2024",
+          date: "17/10/2024",
           content: "Querida mía, desde el primer momento que te vi...",
           image: "/placeholder.svg?height=300&width=400",
         },
         {
           title: "En Nuestro Aniversario",
-          date: "01/03/2024",
+          date: "15/09/2024",
           content: "Un mes más junto a ti, y cada día te amo más...",
           image: "/placeholder.svg?height=300&width=400",
         },
       ],
     },
-    {
-      title: "Poemas",
-      icon: <Quote className="h-6 w-6" />,
-      items: [
-        {
-          title: "Tu Sonrisa",
-          date: "20/02/2024",
-          content:
-            "En tus ojos encuentro mi destino,\nEn tu sonrisa, mi felicidad...",
-          image: "/placeholder.svg?height=300&width=400",
-        },
-        {
-          title: "Nuestro Amor",
-          date: "05/03/2024",
-          content:
-            "Como el sol que brilla cada mañana,\nAsí iluminas mi vida...",
-          image: "/placeholder.svg?height=300&width=400",
-        },
-      ],
-    },
-    {
-      title: "Canciones Dedicadas",
-      icon: <Music className="h-6 w-6" />,
-      items: [
-        {
-          title: "Perfect - Ed Sheeran",
-          date: "25/02/2024",
-          content: "Porque bailar contigo es como vivir un sueño...",
-          image: "/placeholder.svg?height=300&width=400",
-        },
-        {
-          title: "All of Me - John Legend",
-          date: "10/03/2024",
-          content: "Porque amas todas mis curvas y todos mis bordes...",
-          image: "/placeholder.svg?height=300&width=400",
-        },
-      ],
-    },
+    // {
+    //   title: "Poemas",
+    //   icon: <Quote className="h-6 w-6" />,
+    //   items: [
+    //     {
+    //       title: "Tu Sonrisa",
+    //       date: "20/02/2024",
+    //       content:
+    //         "En tus ojos encuentro mi destino,\nEn tu sonrisa, mi felicidad...",
+    //       image: "/placeholder.svg?height=300&width=400",
+    //     },
+    //     {
+    //       title: "Nuestro Amor",
+    //       date: "05/03/2024",
+    //       content:
+    //         "Como el sol que brilla cada mañana,\nAsí iluminas mi vida...",
+    //       image: "/placeholder.svg?height=300&width=400",
+    //     },
+    //   ],
+    // },
+    // {
+    //   title: "Canciones Dedicadas",
+    //   icon: <Music className="h-6 w-6" />,
+    //   items: [
+    //     {
+    //       title: "Perfect - Ed Sheeran",
+    //       date: "25/02/2024",
+    //       content: "Porque bailar contigo es como vivir un sueño...",
+    //       image: "/placeholder.svg?height=300&width=400",
+    //     },
+    //     {
+    //       title: "All of Me - John Legend",
+    //       date: "10/03/2024",
+    //       content: "Porque amas todas mis curvas y todos mis bordes...",
+    //       image: "/placeholder.svg?height=300&width=400",
+    //     },
+    //   ],
+    // },
   ];
 
   return (
