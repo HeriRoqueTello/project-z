@@ -1,14 +1,14 @@
 import { sections } from "@/data/sections";
+import { Heart } from "lucide-react";
+import { Dancing_Script } from "next/font/google";
 import Extras from "./components/extras";
 import Hero from "./components/hero";
 import MoviesSection from "./components/movies-section";
 import PhotoGallery from "./components/photo-gallery";
-import SpotifySection from "./components/spotify-section";
-import TikTokSection from "./components/tiktok-section";
-import Timeline from "./components/timeline";
-import { Dancing_Script } from "next/font/google";
 import SectionNavigator from "./components/section-navigator";
-import { Heart } from "lucide-react";
+import SpotifySection from "./components/spotify-section";
+// import TikTokSection from "./components/tiktok-section";
+import Timeline from "./components/timeline";
 
 const dancingScript = Dancing_Script({ subsets: ["latin"] });
 
@@ -17,7 +17,7 @@ export default function Home() {
     <main className="min-h-screen bg-beige">
       <Hero />
       <Timeline />
-      <TikTokSection />
+      {/* <TikTokSection /> */}
       <SpotifySection />
       <MoviesSection />
       <PhotoGallery />
