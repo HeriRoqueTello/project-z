@@ -65,12 +65,12 @@ export default function TikToksPage() {
         </div>
 
         {/* Botón para agregar nuevo TikTok */}
-        <div className="mt-12 text-center">
+        {/* <div className="mt-12 text-center">
           <button className="group inline-flex items-center justify-center rounded-full bg-pink-600 px-6 py-3 text-sm font-medium text-white transition-all duration-200 hover:bg-pink-700">
             <Heart className="mr-2 h-4 w-4 transition-transform group-hover:scale-125" />
             Agregar Nuevo TikTok
           </button>
-        </div>
+        </div> */}
       </div>
     </main>
   );
