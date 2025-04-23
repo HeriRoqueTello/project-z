@@ -1,6 +1,7 @@
 import { items } from "@/data/extras";
-import { Heart } from "lucide-react";
+import { Calendar, Heart, Link, Sparkles } from "lucide-react";
 import { Dancing_Script } from "next/font/google";
+import Image from "next/image";
 
 const dancingScript = Dancing_Script({ subsets: ["latin"] });
 
@@ -42,15 +43,63 @@ export default function Extras() {
               </div>
             </div>
           ))}
+          {/* San Valentín como recuerdo especial */}
+          <div className="group relative overflow-hidden rounded-lg bg-white p-6 shadow-lg transition-transform hover:scale-105">
+            <div className="absolute -right-4 -top-4 rotate-12 text-pink-100">
+              <Heart className="h-20 w-20" />
+            </div>
+
+            <div className="relative">
+              <div className="mb-4 flex items-center gap-3">
+                <div className="rounded-full bg-pink-100 p-2 text-pink-600">
+                  <Calendar className="h-6 w-6" />
+                </div>
+                <h3 className="text-xl font-semibold text-pink-600">
+                  San Valentín 2025
+                </h3>
+              </div>
+
+              <div className="relative mb-4 overflow-hidden rounded-lg">
+                <div className="aspect-video w-full overflow-hidden rounded-lg">
+                  <Image
+                    src="/placeholder.svg?height=300&width=500"
+                    alt="San Valentín 2025"
+                    width={500}
+                    height={300}
+                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition-opacity group-hover:opacity-100">
+                    <Sparkles className="h-12 w-12 text-white" />
+                  </div>
+                </div>
+              </div>
+
+              <p className="mb-4 text-gray-700">
+                Un día especial donde nuestro amor se celebró con todo el
+                corazón...
+              </p>
+
+              <div className="flex justify-between">
+                <p className="text-sm text-gray-500">14/02/2024</p>
+                <Link
+                  href="/valentine"
+                  className="inline-flex items-center text-sm font-medium text-pink-600 hover:text-pink-700"
+                >
+                  Ver recuerdo
+                  <Heart className="ml-1 h-3 w-3" fill="currentColor" />
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Add Memory Button */}
-        <div className="mt-12 text-center">
+        {/* <div className="mt-12 text-center">
           <button className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-pink-600 px-8 py-3 font-medium text-white transition duration-300 hover:bg-pink-700">
             <span className="mr-2">Agregar un Recuerdo</span>
             <Heart className="h-5 w-5 transition-transform group-hover:scale-125" />
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );
