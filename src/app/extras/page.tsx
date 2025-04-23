@@ -1,6 +1,7 @@
-import { Gift, Mail } from "lucide-react";
+import { Calendar, Heart, Mail, Sparkles } from "lucide-react";
 import { Dancing_Script } from "next/font/google";
 import Image from "next/image";
+import Link from "next/link";
 
 const dancingScript = Dancing_Script({ subsets: ["latin"] });
 
@@ -21,6 +22,21 @@ export default function ExtrasPage() {
           date: "15/09/2024",
           content: "Un mes más junto a ti, y cada día te amo más...",
           image: "/placeholder.svg?height=300&width=400",
+        },
+      ],
+    },
+    {
+      title: "Momentos Especiales",
+      icon: <Calendar className="h-6 w-6" />,
+      items: [
+        {
+          title: "San Valentín 2025",
+          date: "14/02/2025",
+          content:
+            "El día que celebramos nuestro amor de la manera más especial...",
+          image: "/placeholder.svg?height=300&width=400",
+          link: "/valentine",
+          linkText: "Ver recuerdo completo",
         },
       ],
     },
@@ -104,31 +120,47 @@ export default function ExtrasPage() {
                       fill
                       className="object-cover transition-transform duration-300 group-hover:scale-110"
                     />
+                    {section.title === "Momentos Especiales" && (
+                      <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition-opacity group-hover:opacity-100">
+                        <Sparkles className="h-12 w-12 text-white" />
+                      </div>
+                    )}
                   </div>
 
                   <p className="whitespace-pre-line text-gray-600">
                     {item.content}
                   </p>
+                  {"link" in item && item.link && (
+                    <div className="mt-4 text-right">
+                      <Link
+                        href={item.link}
+                        className="inline-flex items-center rounded-full bg-pink-100 px-4 py-2 text-sm font-medium text-pink-600 transition-colors hover:bg-pink-200"
+                      >
+                        {item.linkText}
+                        <Heart className="ml-2 h-4 w-4" />
+                      </Link>
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
 
             {/* Botón para agregar nuevo item en cada sección */}
-            <div className="mt-6 text-center">
+            {/* <div className="mt-6 text-center">
               <button className="inline-flex items-center justify-center rounded-full border-2 border-pink-600 px-6 py-2 text-sm font-medium text-pink-600 transition-colors hover:bg-pink-50">
                 Agregar {section.title.slice(0, -1)}
               </button>
-            </div>
+            </div> */}
           </div>
         ))}
 
         {/* Botón para agregar nueva sección */}
-        <div className="mt-12 text-center">
+        {/* <div className="mt-12 text-center">
           <button className="group inline-flex items-center justify-center rounded-full bg-pink-600 px-6 py-3 text-sm font-medium text-white transition-all duration-200 hover:bg-pink-700">
             <Gift className="mr-2 h-4 w-4 transition-transform group-hover:scale-125" />
             Crear Nueva Sección
           </button>
-        </div>
+        </div> */}
       </div>
     </main>
   );
