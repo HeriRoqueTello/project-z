@@ -1,5 +1,4 @@
 import { playlists } from "@/data/playlists";
-import { Music2 } from "lucide-react";
 import { Dancing_Script } from "next/font/google";
 
 const dancingScript = Dancing_Script({ subsets: ["latin"] });
@@ -56,12 +55,12 @@ export default function PlaylistsPage() {
         </div>
 
         {/* Botón para crear nueva playlist */}
-        <div className="mt-12 text-center">
+        {/* <div className="mt-12 text-center">
           <button className="group inline-flex items-center justify-center rounded-full bg-pink-600 px-6 py-3 text-sm font-medium text-white transition-all duration-200 hover:bg-pink-700">
             <Music2 className="mr-2 h-4 w-4 transition-transform group-hover:scale-125" />
             Crear Nueva Playlist
           </button>
-        </div>
+        </div> */}
       </div>
     </main>
   );
