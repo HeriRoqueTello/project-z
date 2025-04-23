@@ -1,19 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { Camera, Clock, Film, Gift, Heart, Menu, Music, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import {
-  Menu,
-  X,
-  Heart,
-  Clock,
-  Music,
-  Film,
-  Camera,
-  Gift,
-  Calendar,
-} from "lucide-react";
+import { useState } from "react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,7 +17,6 @@ export default function Navbar() {
     { name: "Películas", href: "/movies", icon: Film },
     { name: "Galería", href: "/gallery", icon: Camera },
     { name: "Extras", href: "/extras", icon: Gift },
-    { name: "San Valentín", href: "/valentine", icon: Calendar },
   ];
 
   return (
