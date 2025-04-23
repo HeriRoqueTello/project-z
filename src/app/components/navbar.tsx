@@ -13,7 +13,7 @@ export default function Navbar() {
     { name: "Inicio", href: "/", icon: Heart },
     { name: "Timeline", href: "/timeline", icon: Clock },
     { name: "Playlists", href: "/playlists", icon: Music },
-    { name: "TikToks", href: "/tiktoks", icon: Film },
+    // { name: "TikToks", href: "/tiktoks", icon: Film },
     { name: "Películas", href: "/movies", icon: Film },
     { name: "Galería", href: "/gallery", icon: Camera },
     { name: "Extras", href: "/extras", icon: Gift },
