@@ -12,22 +12,22 @@ type MediaItem = {
 
 export const photosInicio = [
   {
-    src: "https://res.cloudinary.com/dlsqr4a8l/image/upload/v1738538016/2024-07-09_16.04.30_acnnlc.png",
+    src: "https://res.cloudinary.com/heriroquet/image/upload/v1738538016/me/2024-07-09_16.04.30_acnnlc.png",
     caption: "Nuestro primera aventura en el minecraft",
     date: "2024",
   },
   {
-    src: "https://res.cloudinary.com/dlsqr4a8l/image/upload/v1738538019/2024-11-13_18.57.12_m4jekx.png",
+    src: "https://res.cloudinary.com/heriroquet/image/upload/v1738538019/me/2024-11-13_18.57.12_m4jekx.png",
     caption: "En nuestro cuarto de travesuras en el minecraft",
     date: "2024",
   },
   {
-    src: "https://res.cloudinary.com/dlsqr4a8l/image/upload/v1738538184/ec1f24ab-5fea-4463-9375-185486d1f81d_g1ktva.jpg",
+    src: "https://res.cloudinary.com/heriroquet/image/upload/v1738538184/me/ec1f24ab-5fea-4463-9375-185486d1f81d_g1ktva.jpg",
     caption: "Segunda salida al cine",
     date: "2024",
   },
   {
-    src: "https://res.cloudinary.com/dlsqr4a8l/image/upload/v1738537958/473701316_2038709746638822_242151646268700133_n_uudad6.jpg",
+    src: "https://res.cloudinary.com/heriroquet/image/upload/v1738537958/me/473701316_2038709746638822_242151646268700133_n_uudad6.jpg",
     caption: "Salida al parque",
     date: "2025",
   },
@@ -44,7 +44,7 @@ export const photos = [
     dateObj: new Date(2024, 11, 15),
   },
   {
-    src: "https://res.cloudinary.com/dlsqr4a8l/image/upload/v1738538190/56814f7e-be37-4030-9654-18f13e35fd78_yjmofb.jpg",
+    src: "https://res.cloudinary.com/heriroquet/image/upload/v1738538190/me/56814f7e-be37-4030-9654-18f13e35fd78_yjmofb.jpg",
     caption: "Fuimos a ver Robot Salvaje",
     date: "2024",
     category: "dates",
@@ -54,7 +54,7 @@ export const photos = [
   },
   {
     src: "https://res.cloudinary.com/heriroquet/video/upload/v1738540803/me/WhatsApp_Video_2025-02-02_at_18.33.32_ebt5li.mp4",
-    thumbnail: "/placeholder.svg?height=800&width=600",
+    thumbnail: "https://res.cloudinary.com/heriroquet/image/upload/v1738540861/me/82ad803d-a3c2-45d7-a7c3-f210ce244d2a_f238qn.jpg",
     caption: "Nuestro 5 Aniversario",
     date: "15/01/2025",
     category: "special",
@@ -63,7 +63,7 @@ export const photos = [
     dateObj: new Date(2025, 0, 15),
   },
   {
-    src: "https://res.cloudinary.com/dlsqr4a8l/image/upload/v1738540671/6c54fd67-d1aa-4c1a-8803-2d03832ad059_llxhxz.jpg",
+    src: "https://res.cloudinary.com/heriroquet/image/upload/v1738540671/me/6c54fd67-d1aa-4c1a-8803-2d03832ad059_llxhxz.jpg",
     caption: "Fui por primera vez a tu casa",
     date: "05/03/2024",
     category: "trips",
@@ -72,7 +72,7 @@ export const photos = [
     dateObj: new Date(2024, 2, 5),
   },
   {
-    src: "https://res.cloudinary.com/dlsqr4a8l/image/upload/v1738540856/6c618f1f-5fa7-49c1-b0f5-cd46f28937bc_zq7ctp.jpg",
+    src: "https://res.cloudinary.com/heriroquet/image/upload/v1738540856/me/6c618f1f-5fa7-49c1-b0f5-cd46f28937bc_zq7ctp.jpg",
     caption: "Momentos memorables que hablamos a diario",
     date: "Siempre",
     category: "special",
@@ -90,7 +90,7 @@ export const photos = [
     dateObj: new Date(2025, 0, 15),
   },
   {
-    src: "https://res.cloudinary.com/dlsqr4a8l/image/upload/v1738540861/82ad803d-a3c2-45d7-a7c3-f210ce244d2a_f238qn.jpg",
+    src: "https://res.cloudinary.com/heriroquet/image/upload/v1738540861/me/82ad803d-a3c2-45d7-a7c3-f210ce244d2a_f238qn.jpg",
     caption: "La ultima visita a mi casa",
     date: "30/01/2025",
     category: "special",
