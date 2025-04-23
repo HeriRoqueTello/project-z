@@ -5,8 +5,8 @@ import Image from "next/image";
 import { Dancing_Script } from "next/font/google";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { useToast } from "@/components/ui/use-toast";
 import { motion } from "framer-motion";
+import { useToast } from "@/hooks/use-toast";
 
 const dancingScript = Dancing_Script({ subsets: ["latin"] });
 
