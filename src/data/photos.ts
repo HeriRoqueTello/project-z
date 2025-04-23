@@ -5,7 +5,8 @@ type MediaItem = {
   category: string
   location: string
   type: "image" | "video"
-  thumbnail?: string // Optional thumbnail for videos
+  thumbnail?: string
+  dateObj?: Date
 }
 
 
@@ -39,6 +40,8 @@ export const photos = [
     date: "15/12/2024",
     category: "dates",
     location: "Cine",
+    type: "image",
+    dateObj: new Date(2024, 11, 15),
   },
   {
     src: "https://res.cloudinary.com/dlsqr4a8l/image/upload/v1738538190/56814f7e-be37-4030-9654-18f13e35fd78_yjmofb.jpg",
@@ -46,13 +49,18 @@ export const photos = [
     date: "2024",
     category: "dates",
     location: "Cine",
+    type: "image",
+    dateObj: new Date(2024, 9, 15),
   },
   {
-    src: "https://res.cloudinary.com/dlsqr4a8l/video/upload/v1738540803/WhatsApp_Video_2025-02-02_at_18.33.32_ebt5li.mp4",
+    src: "https://res.cloudinary.com/heriroquet/video/upload/v1738540803/me/WhatsApp_Video_2025-02-02_at_18.33.32_ebt5li.mp4",
+    thumbnail: "/placeholder.svg?height=800&width=600",
     caption: "Nuestro 5 Aniversario",
     date: "15/01/2025",
     category: "special",
     location: "Tu casa",
+    type: "video",
+    dateObj: new Date(2025, 0, 15),
   },
   {
     src: "https://res.cloudinary.com/dlsqr4a8l/image/upload/v1738540671/6c54fd67-d1aa-4c1a-8803-2d03832ad059_llxhxz.jpg",
@@ -60,6 +68,8 @@ export const photos = [
     date: "05/03/2024",
     category: "trips",
     location: "Tu casa",
+    type: "image",
+    dateObj: new Date(2024, 2, 5),
   },
   {
     src: "https://res.cloudinary.com/dlsqr4a8l/image/upload/v1738540856/6c618f1f-5fa7-49c1-b0f5-cd46f28937bc_zq7ctp.jpg",
@@ -67,6 +77,17 @@ export const photos = [
     date: "Siempre",
     category: "special",
     location: "Donde sea",
+    type: "image",
+    dateObj: new Date(2025, 4, 22),
+  },
+  {
+    src: "https://res.cloudinary.com/heriroquet/image/upload/v1738540682/me/67bd89c7-0ad2-4d01-ab8a-1d44d71e2d0a_l1xofm.jpg",
+    caption: "La robada epica (todo mio)",
+    date: "15/01/2025",
+    category: "special",
+    location: "Parque",
+    type: "image",
+    dateObj: new Date(2025, 0, 15),
   },
   {
     src: "https://res.cloudinary.com/dlsqr4a8l/image/upload/v1738540861/82ad803d-a3c2-45d7-a7c3-f210ce244d2a_f238qn.jpg",
@@ -74,6 +95,8 @@ export const photos = [
     date: "30/01/2025",
     category: "special",
     location: "Condominios",
+    type: "image",
+    dateObj: new Date(2025, 0, 30),
   },
 ];
 
