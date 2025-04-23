@@ -223,6 +223,7 @@ export default function ParticleBackground() {
     return () => {
       particles = [];
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dimensions, pathname]);
 
   return (
