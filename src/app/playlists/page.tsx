@@ -45,11 +45,11 @@ export default function PlaylistsPage() {
               </div>
 
               {/* Overlay con efecto hover */}
-              <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition-opacity group-hover:opacity-100">
+              {/* <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition-opacity group-hover:opacity-100">
                 <button className="transform rounded-full bg-white px-6 py-2 font-medium text-gray-900 transition-transform group-hover:scale-105">
                   Reproducir
                 </button>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>
